@@ -14,6 +14,9 @@
         "**/bin/**"
       ],
       "message": "chore(release): publish"
+    },
+    "publish": {
+      "npmClient": "npm"
     }
   }
 }
