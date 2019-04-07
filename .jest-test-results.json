@@ -25,16 +25,16 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1554610598487,
+  "startTime": 1554611189163,
   "success": false,
   "testResults": [
     {
       "assertionResults": [],
       "coverage": {},
-      "endTime": 1554610600027,
-      "message": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    Cannot find module '@emotion/babel-preset-css-prop' from '/Users/elanhant/work/jeeves'\n\n      \u001b[2mat Function.module.exports [as sync] (\u001b[22mnode_modules/resolve/lib/sync.js\u001b[2m:58:15)\u001b[22m\n          at Array.map (<anonymous>)\n",
+      "endTime": 1554611190941,
+      "message": "  ● Test suite failed to run\n\n    Cannot find module '@emotion/babel-preset-css-prop' from '/Users/elanhant/work/jeeves'\n\n      at Function.module.exports [as sync] (node_modules/resolve/lib/sync.js:58:15)\n          at Array.map (<anonymous>)\n",
       "name": "/Users/elanhant/work/jeeves/packages/side-sheet/src/__tests__/Scrim.test.tsx",
-      "startTime": 1554610600027,
+      "startTime": 1554611190941,
       "status": "failed",
       "summary": ""
     }
