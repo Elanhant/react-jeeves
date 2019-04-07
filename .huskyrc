@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "pre-commit": "yarn ts:check && yarn commit-test-output && lint-staged"
+  }
+}

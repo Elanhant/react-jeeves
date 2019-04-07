@@ -1,0 +1,19 @@
+{
+  "lerna": "3.10.8",
+  "packages": ["packages/*"],
+  "npmClient": "yarn",
+  "version": "independent",
+  "command": {
+    "version": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "ignoreChanges": [
+        "**/stories/**",
+        "**/__tests__/**",
+        "**/*.md",
+        "**/bin/**"
+      ],
+      "message": "chore(release): publish"
+    }
+  }
+}

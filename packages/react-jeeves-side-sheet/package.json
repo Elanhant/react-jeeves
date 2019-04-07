@@ -1,0 +1,39 @@
+{
+  "name": "react-jeeves-side-sheet",
+  "version": "0.0.0",
+  "description": "Library for displaying side sheets in a React application",
+  "keywords": [
+    "React",
+    "side",
+    "sheet",
+    "hooks"
+  ],
+  "author": "Aleksei Ustiuzhanin <elanhant@gmail.com>",
+  "homepage": "https://github.com/Elanhant/react-jeeves/tree/master/packages/react-jeeves-side-sheet#readme",
+  "license": "MIT",
+  "main": "lib/react-jeeves-side-sheet.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elanhant/react-jeeves.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Elanhant/react-jeeves/issues"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
