@@ -1,7 +1,7 @@
 {
   "lerna": "3.10.8",
   "packages": ["packages/*"],
-  "npmClient": "npm",
+  "npmClient": "yarn",
   "version": "independent",
   "command": {
     "version": {
@@ -13,13 +13,11 @@
         "**/*.md",
         "**/bin/**"
       ],
-      "message": "chore(release): publish",
-      "npmClient": "npm",
-      "registry": "https://registry.npmjs.org"
+      "message": "chore(release): publish"
     },
     "publish": {
       "npmClient": "npm",
-      "registry": "https://registry.npmjs.org"
+      "registry": "https://registry.npmjs.org/"
     }
   }
 }
