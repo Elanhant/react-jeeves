@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 0,
+  "numFailedTestSuites": 1,
   "numFailedTests": 0,
-  "numPassedTestSuites": 1,
-  "numPassedTests": 1,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
-  "numRuntimeErrorTestSuites": 0,
+  "numRuntimeErrorTestSuites": 1,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 1,
+  "numTotalTests": 0,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -25,25 +25,17 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1554608776945,
-  "success": true,
+  "startTime": 1554610598487,
+  "success": false,
   "testResults": [
     {
-      "assertionResults": [
-        {
-          "ancestorTitles": ["<Scrim />"],
-          "failureMessages": [],
-          "fullName": "<Scrim /> renders without exploding",
-          "location": null,
-          "status": "passed",
-          "title": "renders without exploding"
-        }
-      ],
-      "endTime": 1554608779345,
-      "message": "",
+      "assertionResults": [],
+      "coverage": {},
+      "endTime": 1554610600027,
+      "message": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    Cannot find module '@emotion/babel-preset-css-prop' from '/Users/elanhant/work/jeeves'\n\n      \u001b[2mat Function.module.exports [as sync] (\u001b[22mnode_modules/resolve/lib/sync.js\u001b[2m:58:15)\u001b[22m\n          at Array.map (<anonymous>)\n",
       "name": "/Users/elanhant/work/jeeves/packages/side-sheet/src/__tests__/Scrim.test.tsx",
-      "startTime": 1554608778082,
-      "status": "passed",
+      "startTime": 1554610600027,
+      "status": "failed",
       "summary": ""
     }
   ],
