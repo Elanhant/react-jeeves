@@ -1,7 +1,6 @@
 import { configure, addDecorator } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
-import { cache } from 'emotion';
 // import testResults from '../.jest-test-results';
 
 // addDecorator(

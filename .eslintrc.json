@@ -35,7 +35,7 @@
       "error",
       {
         "devDependencies": true,
-        "packageDir": ["./", "./packages/react-jeeves-side-sheet/"]
+        "packageDir": ["./", "./packages/side-sheet/"]
       }
     ],
     "import/named": "off",

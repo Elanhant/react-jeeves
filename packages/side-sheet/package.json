@@ -11,7 +11,7 @@
   "author": "Aleksei Ustiuzhanin <elanhant@gmail.com>",
   "homepage": "https://github.com/Elanhant/react-jeeves/tree/master/packages/react-jeeves-side-sheet#readme",
   "license": "MIT",
-  "main": "lib/react-jeeves-side-sheet.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -33,7 +33,9 @@
     "url": "https://github.com/Elanhant/react-jeeves/issues"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.10",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-spring": "^8.0.19"
   }
 }
