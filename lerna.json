@@ -16,7 +16,8 @@
       "message": "chore(release): publish"
     },
     "publish": {
-      "npmClient": "npm"
+      "npmClient": "npm",
+      "registry": "https://registry.npmjs.org"
     }
   }
 }
