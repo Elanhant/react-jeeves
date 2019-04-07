@@ -1,10 +1,13 @@
 {
   "lerna": "3.10.8",
   "packages": ["packages/*"],
-  "npmClient": "yarn",
+  "npmClient": "npm",
   "version": "independent",
+  "registry": "https://registry.npmjs.org/",
   "command": {
     "version": {
+      "npmClient": "npm",
+      "registry": "https://registry.npmjs.org/",
       "allowBranch": "master",
       "conventionalCommits": true,
       "ignoreChanges": [

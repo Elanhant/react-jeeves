@@ -25,7 +25,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1554618492228,
+  "startTime": 1554618675432,
   "success": true,
   "testResults": [
     {
@@ -39,10 +39,10 @@
           "title": "renders without exploding"
         }
       ],
-      "endTime": 1554618493826,
+      "endTime": 1554618677038,
       "message": "",
       "name": "/Users/elanhant/work/jeeves/packages/side-sheet/src/__tests__/Scrim.test.tsx",
-      "startTime": 1554618493260,
+      "startTime": 1554618676469,
       "status": "passed",
       "summary": ""
     }
