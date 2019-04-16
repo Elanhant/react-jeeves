@@ -37,10 +37,10 @@
     "url": "https://github.com/Elanhant/react-jeeves/issues"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.10",
     "react-spring": "^8.0.19"
   },
   "devDependencies": {
+    "@emotion/core": "^10.0.10",
     "rollup": "^1.9.0",
     "rollup-plugin-cleaner": "^0.2.0",
     "rollup-plugin-typescript2": "^0.20.1",

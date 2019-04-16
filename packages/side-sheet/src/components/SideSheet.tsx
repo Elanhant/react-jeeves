@@ -1,25 +1,9 @@
 import React from 'react';
-import { css } from '@emotion/core';
 import { useTransition, UseTransitionResult, animated } from 'react-spring';
 import SideSheetProvider from './Provider';
 import Scrim from './Scrim';
 
-const containerCss = css`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`;
-
-const baseCss = css`
-  position: absolute;
-  max-width: 100vw;
-  height: 100vh;
-  right: 0;
-`;
-
-const transitionConfig = {
+const defaultTransitionConfig = {
   from: { opacity: 0, transform: 'translate3d(100%, 0, 0)' },
   enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
   leave: { opacity: 0, transform: 'translate3d(100%, 0, 0)' },
@@ -29,12 +13,20 @@ export type SideSheetProps = {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  containerClassName?: string;
+  scrimClassName?: string;
+  sheetClassName?: string;
+  transitionConfig?: Record<string, any>;
 };
 
 export default function SideSheet({
   isOpen,
   onClose,
   children,
+  containerClassName,
+  scrimClassName,
+  sheetClassName,
+  transitionConfig = defaultTransitionConfig,
 }: SideSheetProps) {
   const tabTrapRef = React.useRef<HTMLDivElement>(null);
 
@@ -46,10 +38,14 @@ export default function SideSheet({
     }: UseTransitionResult<boolean, any>) => {
       return (
         shouldDisplaySheet && (
-          <div css={containerCss} key={key}>
-            <Scrim style={props} sideSheetRef={tabTrapRef.current}>
+          <div className={containerClassName} key={key}>
+            <Scrim
+              style={props}
+              sideSheetRef={tabTrapRef.current}
+              className={scrimClassName}
+            >
               <animated.div
-                css={baseCss}
+                className={sheetClassName}
                 style={props}
                 onClick={stopPropagation}
                 ref={tabTrapRef}
@@ -61,7 +57,7 @@ export default function SideSheet({
         )
       );
     },
-    [children, tabTrapRef],
+    [children, tabTrapRef, containerClassName, scrimClassName, sheetClassName],
   );
 
   const transitions = useTransition(isOpen, null, transitionConfig);
