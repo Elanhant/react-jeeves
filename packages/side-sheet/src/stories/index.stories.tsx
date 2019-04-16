@@ -1,9 +1,39 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { css } from '@emotion/core';
+import { css, ClassNames } from '@emotion/core';
 import useSideSheet from '../hooks/useSideSheet';
 import SideSheet from '../components/SideSheet';
+
+const containerCss = css`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
+const scrimCss = css`
+  transform: none !important; // react-spring may try to set transform style which we don't need
+
+  &:before {
+    content: ' ';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.42);
+  }
+`;
+
+const sheetCss = css`
+  position: absolute;
+  max-width: 100vw;
+  height: 100vh;
+  right: 0;
+`;
 
 storiesOf('side-sheet', module)
   .add('Default', () => {
@@ -108,7 +138,20 @@ function TestComponent({ children }: { children: React.ReactNode }) {
   return (
     <React.Fragment>
       <button onClick={open}>Open side sheet</button>
-      <SideSheet {...sideSheetProps}>{children}</SideSheet>
+      <ClassNames>
+        {({ css: cxCss }) => {
+          return (
+            <SideSheet
+              {...sideSheetProps}
+              containerClassName={cxCss(containerCss)}
+              scrimClassName={cxCss(scrimCss)}
+              sheetClassName={cxCss(sheetCss)}
+            >
+              {children}
+            </SideSheet>
+          );
+        }}
+      </ClassNames>
     </React.Fragment>
   );
 }
