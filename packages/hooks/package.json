@@ -1,0 +1,49 @@
+{
+  "name": "react-jeeves-hooks",
+  "version": "0.0.1",
+  "description": "Shared React hooks to be used in React Jeeves packages",
+  "keywords": [
+    "React",
+    "hooks"
+  ],
+  "author": "Aleksei Ustiuzhanin <elanhant@gmail.com>",
+  "homepage": "https://github.com/Elanhant/react-jeeves/tree/master/packages/react-jeeves-hooks#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "sideEffects": false,
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "src/__tests__"
+  },
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elanhant/react-jeeves.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "yarn build"
+  },
+  "bugs": {
+    "url": "https://github.com/Elanhant/react-jeeves/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^1.9.0",
+    "rollup-plugin-cleaner": "^0.2.0",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "standard-version": "^5.0.2",
+    "typescript": "^3.4.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
