@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTransition, UseTransitionResult, animated } from 'react-spring';
+import { useTabTrap } from 'react-jeeves-hooks';
 import SideSheetProvider from './Provider';
 import Scrim from './Scrim';
 
@@ -28,7 +29,17 @@ export default function SideSheet({
   sheetClassName,
   transitionConfig = defaultTransitionConfig,
 }: SideSheetProps) {
-  const tabTrapRef = React.useRef<HTMLDivElement>(null);
+  const { trapRef, enableTabTrap, disableTabTrap } = useTabTrap<
+    HTMLDivElement
+  >();
+
+  React.useEffect(() => {
+    enableTabTrap();
+
+    return () => {
+      disableTabTrap();
+    };
+  }, [enableTabTrap, disableTabTrap]);
 
   const renderSheet = React.useCallback(
     ({
@@ -39,16 +50,12 @@ export default function SideSheet({
       return (
         shouldDisplaySheet && (
           <div className={containerClassName} key={key}>
-            <Scrim
-              style={props}
-              sideSheetRef={tabTrapRef.current}
-              className={scrimClassName}
-            >
+            <Scrim style={props} className={scrimClassName}>
               <animated.div
                 className={sheetClassName}
                 style={props}
                 onClick={stopPropagation}
-                ref={tabTrapRef}
+                ref={trapRef}
               >
                 {children}
               </animated.div>
@@ -57,7 +64,7 @@ export default function SideSheet({
         )
       );
     },
-    [children, tabTrapRef, containerClassName, scrimClassName, sheetClassName],
+    [children, trapRef, containerClassName, scrimClassName, sheetClassName],
   );
 
   const transitions = useTransition(isOpen, null, transitionConfig);
