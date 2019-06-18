@@ -1,6 +1,6 @@
 {
   "name": "react-jeeves-hooks",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Shared React hooks to be used in React Jeeves packages",
   "keywords": [
     "React",
@@ -34,7 +34,6 @@
   "bugs": {
     "url": "https://github.com/Elanhant/react-jeeves/issues"
   },
-  "dependencies": {},
   "devDependencies": {
     "rollup": "^1.9.0",
     "rollup-plugin-cleaner": "^0.2.0",
