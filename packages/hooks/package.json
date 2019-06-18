@@ -1,6 +1,6 @@
 {
   "name": "react-jeeves-hooks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared React hooks to be used in React Jeeves packages",
   "keywords": [
     "React",
