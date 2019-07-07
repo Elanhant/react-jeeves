@@ -1,6 +1,6 @@
 {
   "name": "react-scrollable-box",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A React component to visually indicate whether there is more content to scroll",
   "keywords": [
     "React",
