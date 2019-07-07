@@ -56,8 +56,8 @@ export default function useElementScrollState<
     dispatch({
       type: ScrollStateActionType.UPDATE,
       payload: {
-        scrolledToTop: target.scrollTop === 0,
-        scrolledToBottom: target.scrollTop === overflowHeight,
+        scrolledToTop: Math.floor(target.scrollTop) === 0,
+        scrolledToBottom: Math.ceil(target.scrollTop) === overflowHeight,
       },
     });
   }, [scrollRef.current, dispatch]);

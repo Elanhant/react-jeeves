@@ -1,4 +1,5 @@
 import React from 'react';
+import { debounce } from 'debounce';
 import useElementScrollState from './useElementScrollState';
 
 export type ScrollableBoxState<T extends HTMLElement> = {
@@ -21,6 +22,7 @@ export default function useScrollableBoxState<T extends HTMLElement>(
   } = useElementScrollState<T>();
 
   const boxRef = React.useRef<T | null>(null);
+  const debounceRef = React.useRef(debounce(onScroll, 50));
 
   const setBoxRef = React.useCallback((element: T | null) => {
     boxRef.current = element;
@@ -29,15 +31,16 @@ export default function useScrollableBoxState<T extends HTMLElement>(
 
   React.useEffect(() => {
     if (boxRef.current) {
-      boxRef.current.addEventListener('scroll', onScroll);
+      boxRef.current.addEventListener('scroll', debounceRef.current);
     }
 
     return () => {
       if (boxRef.current) {
-        boxRef.current.removeEventListener('scroll', onScroll);
+        boxRef.current.removeEventListener('scroll', debounceRef.current);
+        debounceRef.current.clear();
       }
     };
-  }, [onScroll]);
+  }, [debounceRef.current]);
 
   const [hasOverflow, setHasOverflow] = React.useState<boolean>(false);
 
