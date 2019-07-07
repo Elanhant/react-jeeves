@@ -3,9 +3,9 @@ import useScrollableBoxState from '../hooks/useScrollableBoxState';
 
 export type ScrollableBoxProps = {
   children: React.ReactNode;
-  topLipClassName: (visible: boolean) => string | undefined;
-  bottomLipClassName: (visible: boolean) => string | undefined;
-  initialScroll?: 'bottom' | 'top';
+  topLipClassName: (hasOverflow: boolean) => string | undefined;
+  bottomLipClassName: (hasOverflow: boolean) => string | undefined;
+  initialScrollPosition?: 'bottom' | 'top';
   className?: string;
   style?: React.CSSProperties;
 };
@@ -23,7 +23,7 @@ const ScrollableBox = React.forwardRef<
       children,
       topLipClassName,
       bottomLipClassName,
-      initialScroll = 'top',
+      initialScrollPosition = 'top',
       className,
       style,
     }: ScrollableBoxProps,
@@ -44,7 +44,7 @@ const ScrollableBox = React.forwardRef<
         listWrapperRef.current = element;
         boxRef(listWrapperRef.current);
 
-        if (listWrapperRef.current && initialScroll === 'bottom') {
+        if (listWrapperRef.current && initialScrollPosition === 'bottom') {
           scrollToBottom(listWrapperRef.current);
           updateScrolledState();
         }

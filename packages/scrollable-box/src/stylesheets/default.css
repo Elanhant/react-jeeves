@@ -28,6 +28,6 @@
     top: 0;
 }
 
-.react-scrollable-box__lip.react-scrollable-box__lip--visible::after {
+.react-scrollable-box__lip.react-scrollable-box__lip--hasOverflow::after {
     opacity: 1;
 }

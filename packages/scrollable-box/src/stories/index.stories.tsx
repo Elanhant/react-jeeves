@@ -139,11 +139,11 @@ storiesOf('scrollable-box', module)
             return (
               <ScrollableBox
                 className={css({ maxHeight: '240px', overflow: 'auto' })}
-                topLipClassName={(visible) =>
-                  visible ? visibleTopCss : hiddenTopCss
+                topLipClassName={(hasOverflow) =>
+                  hasOverflow ? visibleTopCss : hiddenTopCss
                 }
-                bottomLipClassName={(visible) =>
-                  visible ? visibleBottomCss : hiddenBottomCss
+                bottomLipClassName={(hasOverflow) =>
+                  hasOverflow ? visibleBottomCss : hiddenBottomCss
                 }
               >
                 {longText}

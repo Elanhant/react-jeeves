@@ -5,17 +5,21 @@ export default function useDefaultLipClassNames(): Pick<
   'topLipClassName' | 'bottomLipClassName'
 > {
   return {
-    topLipClassName: (visible: boolean) => getLipClassName('top', visible),
-    bottomLipClassName: (visible: boolean) =>
-      getLipClassName('bottom', visible),
+    topLipClassName: (hasOverflow: boolean) =>
+      getLipClassName('top', hasOverflow),
+    bottomLipClassName: (hasOverflow: boolean) =>
+      getLipClassName('bottom', hasOverflow),
   };
 }
 
-function getLipClassName(position: 'top' | 'bottom', visible: boolean): string {
+function getLipClassName(
+  position: 'top' | 'bottom',
+  hasOverflow: boolean,
+): string {
   return concatClassNames([
     'react-scrollable-box__lip',
     `react-scrollable-box__lip--${position === 'top' ? 'top' : 'bottom'}`,
-    visible && 'react-scrollable-box__lip--visible',
+    hasOverflow && 'react-scrollable-box__lip--hasOverflow',
   ]);
 }
 

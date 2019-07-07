@@ -35,7 +35,9 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.14",
     "@emotion/core": "^10.0.10",
+    "@types/debounce": "^1.2.0",
     "rollup": "^1.9.0",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-copy": "^3.0.0",
@@ -46,5 +48,8 @@
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "debounce": "^1.2.0"
   }
 }
