@@ -35,7 +35,12 @@
       "error",
       {
         "devDependencies": true,
-        "packageDir": ["./", "./packages/side-sheet/"]
+        "packageDir": [
+          "./",
+          "./packages/side-sheet/",
+          "./packages/scrollable-box/",
+          "./packages/hooks/"
+        ]
       }
     ],
     "import/named": "off",
