@@ -1,0 +1,33 @@
+.react-scrollable-box__lip {
+  height: 1px;
+  border: none;
+  position: relative;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.react-scrollable-box__lip::after {
+    content: ' ';
+    position: absolute;
+    height: 5px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.react-scrollable-box__lip.react-scrollable-box__lip--top::after {
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 5px 5px 0 rgba(33, 34, 38, 0.05);
+    bottom: 0;
+}
+
+.react-scrollable-box__lip.react-scrollable-box__lip--bottom::after {
+    border-top: 1px solid #e6e6e6;
+    box-shadow: 0 -5px 5px 0 rgba(33, 34, 38, 0.05);
+    top: 0;
+}
+
+.react-scrollable-box__lip.react-scrollable-box__lip--visible::after {
+    opacity: 1;
+}
