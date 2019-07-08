@@ -2,6 +2,15 @@
 
 `ScrollableBox` is a component that allows to visually indicate whether it is possible to see more content by scrolling.
 
+## Installation
+```
+yarn add react-scrollable-box
+```
+or
+```
+npm install --save react-scrollable-box
+```
+
 ## Usage
 
 Think of a `ScrollableBox` as a group of 3 elements: the scrollable content itself and two "lips" or edges. Those lips can be used to mark scrollable content's beginning and end, and/or let users know if there's more content to be scrolled.
