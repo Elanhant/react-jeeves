@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/Elanhant/react-jeeves/compare/react-jeeves-side-sheet@0.3.0...react-jeeves-side-sheet@0.3.1) (2019-10-22)
+
+### Bug Fixes
+
+- **side-sheet:** fix dependency version for react-jeeves-hooks ([6a3aba7](https://github.com/Elanhant/react-jeeves/commit/6a3aba7))
+
 # [0.3.0](https://github.com/Elanhant/react-jeeves/compare/react-jeeves-side-sheet@0.2.1...react-jeeves-side-sheet@0.3.0) (2019-07-07)
 
 ### Features
