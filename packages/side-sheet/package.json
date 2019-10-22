@@ -37,7 +37,7 @@
     "url": "https://github.com/Elanhant/react-jeeves/issues"
   },
   "dependencies": {
-    "react-jeeves-hooks": "^0.0.1",
+    "react-jeeves-hooks": "*",
     "react-spring": "^8.0.19"
   },
   "devDependencies": {
